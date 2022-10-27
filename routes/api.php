@@ -20,10 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test', function () {
-    return ["msg" => "Minha resposta da api"];
-});
-
 //Virtual Cards Route
 Route::namespace('Api')->group(function () {
     Route::prefix('virtualcards')->group(function () {

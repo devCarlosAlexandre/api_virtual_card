@@ -26,4 +26,9 @@ class VirtualcardController extends Controller
         $virtualcard = $this->virtualcard->create($data);
         return response()->json($virtualcard);
     }
+    public function show($id)
+    {
+        $virtualcard = $this->virtualcard->find($id);
+        return response()->json($virtualcard);
+    }
 }
