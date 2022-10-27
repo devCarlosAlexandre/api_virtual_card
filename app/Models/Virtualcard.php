@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Virtualcard extends Model
 {
     protected $fillable = [
-        'name', 'link_github', 'link_linkedin'
+        'name', 'link_github', 'link_linkedin', 'history'
     ];
 }

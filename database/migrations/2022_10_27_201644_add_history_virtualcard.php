@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableVirtualcards extends Migration
+class AddHistoryVirtualcard extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateTableVirtualcards extends Migration
      */
     public function up()
     {
-        Schema::create('virtualcards', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('link_github');
-            $table->string('link_linkedin');
-
-            $table->timestamps();
+        Schema::table('virtualcards', function (Blueprint $table) {
+            //
         });
     }
 
@@ -30,6 +25,8 @@ class CreateTableVirtualcards extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('virtualcards');
+        Schema::table('virtualcards', function (Blueprint $table) {
+            //
+        });
     }
 }

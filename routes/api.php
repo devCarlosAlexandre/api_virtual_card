@@ -25,5 +25,6 @@ Route::namespace('Api')->group(function () {
     Route::prefix('virtualcards')->group(function () {
         Route::get('/', [VirtualcardController::class, 'index']);
         Route::post('/', [VirtualcardController::class, 'save']);
+        Route::get('/{id}', [VirtualcardController::class, 'show']);
     });
 });
