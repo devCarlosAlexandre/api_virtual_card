@@ -16,7 +16,7 @@ class VirtualcardController extends Controller
 
     public function index()
     {
-        $virtualcards = $this->virtualcard->paginate(1);
+        $virtualcards = $this->virtualcard->all();
         return response()->json($virtualcards);
     }
 
